@@ -6,26 +6,23 @@ const flash = require("express-flash");
 
 const app = express();
 
-const conn = require('./db/conn')
+const connect = require('./database/connect');
 
 //Importar as tabelas - Models
-const User = require('./models/User')
-const Publication = require('./models/Publication')
-const Like = require('./models/Like')
-const Comment = require('./models/Comment')
+const Official = require('./models/Official');
 
 //Importar as ROTAS - router
-const authRouters = require('./routes/authRouters')
+const OfficialRoutes = require('./routes/OfficialRoutes');
 
 const hbs = exphbs.create({
   partialsDir: ['views/partials']
-})
+});
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json())
+app.use(express.json());
 
 app.use(
   session({
@@ -44,9 +41,9 @@ app.use(
       httpOnly: true
     }
   })
-)
+);
 
-app.use(flash())
+app.use(flash());
 
 app.use(express.static("public"));
 
@@ -55,20 +52,20 @@ app.use((request, response, next)=>{
     response.locals.session = request.session
   }
   next()
-})
+});
 
 //USAR AS ROTAS
 // /nomeMiddle/nomeRota
-app.use('/', authRouters)
+app.use('/', OfficialRoutes);
 
 app.get('/', (req, res) => {
   return res.render('home')
-})
+});
 
-conn
+connect
 // .sync({force:true})
 .sync()
 .then(()=>{
-  app.listen(3333)
+  app.listen(8080);
 })
 .catch((err)=>console.log(err))

@@ -1,8 +1,7 @@
 {
   "name": "gwestyy",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,5 +24,14 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eliassx/gwestyy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Eliassx/gwestyy/issues"
+  },
+  "homepage": "https://github.com/Eliassx/gwestyy#readme",
+  "description": ""
 }

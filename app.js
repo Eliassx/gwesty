@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const exphbs = require("express-handlebars");
 const session = require("express-session"); //Criar a sessão do usuário na aplicação
 const FileStore = require("session-file-store")(session); //Salvar as sessões na pasta session
@@ -6,13 +7,13 @@ const flash = require("express-flash");
 
 const app = express();
 
-const connect = require('./database/connect');
+const connect = require('./src/database/connect');
 
 //Importar as tabelas - Models
-const Official = require('./models/Official');
+const Official = require('./src/models/Official');
 
 //Importar as ROTAS - router
-const OfficialRoutes = require('./routes/OfficialRoutes');
+const OfficialRoutes = require('./src/routes/OfficialRoutes');
 
 const hbs = exphbs.create({
   partialsDir: ['views/partials']
@@ -20,6 +21,7 @@ const hbs = exphbs.create({
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
+app.set("views", path.join(__dirname, "src/views"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -45,7 +47,7 @@ app.use(
 
 app.use(flash());
 
-app.use(express.static("public"));
+app.use(express.static("./src/public"));
 
 app.use((request, response, next)=>{
   if(request.session.userId){
@@ -58,8 +60,8 @@ app.use((request, response, next)=>{
 // /nomeMiddle/nomeRota
 app.use('/', OfficialRoutes);
 
-app.get('/', (req, res) => {
-  return res.render('home')
+app.get('/', (request, response) => {
+  return response.render('home')
 });
 
 connect

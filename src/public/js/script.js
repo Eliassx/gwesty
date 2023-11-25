@@ -10,7 +10,7 @@ const stocks = document.getElementById('stocks');
 
 function select(id){   
   if(id === "home") {
-    home.style.backgroundColor = "#813130";
+    home.style.backgroundColor = "#2F2E41";
     home.style.boxShadow = "9px 5px 7px rgba(0, 0, 0, 0.25)";
 
     auxiliary.style.backgroundColor = "";
@@ -40,7 +40,7 @@ function select(id){
     home.style.backgroundColor = "";
     home.style.boxShadow = "";
 
-    auxiliaryy.style.backgroundColor = "#813130";
+    auxiliary.style.backgroundColor = "#2F2E41";
     auxiliaryy.style.boxShadow = "9px 5px 7px rgba(0, 0, 0, 0.25)";
 
     auxiliary.style.display = "none"
@@ -73,7 +73,7 @@ function select(id){
     auxiliary.style.boxShadow = "";
     auxiliaryy.style.display = "none";
     
-    guests.style.backgroundColor = "#813130";
+    guests.style.backgroundColor = "#2F2E41";
     guests.style.boxShadow = "9px 5px 7px rgba(0, 0, 0, 0.25)";
 
     host.style.backgroundColor = "";
@@ -103,7 +103,7 @@ function select(id){
     guests.style.backgroundColor = "";
     guests.style.boxShadow = "";
     
-    host.style.backgroundColor = "#813130";
+    host.style.backgroundColor = "#2F2E41";
     host.style.boxShadow = "9px 5px 7px rgba(0, 0, 0, 0.25)";
 
     expenditure.style.backgroundColor = "";
@@ -133,7 +133,7 @@ function select(id){
     host.style.backgroundColor = "";
     host.style.boxShadow = "";
 
-    expenditure.style.backgroundColor = "#813130";
+    expenditure.style.backgroundColor = "#2F2E41";
     expenditure.style.boxShadow = "9px 5px 7px rgba(0, 0, 0, 0.25)";
 
     reserve.style.backgroundColor = "";
@@ -163,7 +163,7 @@ function select(id){
     expenditure.style.backgroundColor = "";
     expenditure.style.boxShadow = "";
 
-    reserve.style.backgroundColor = "#813130";
+    reserve.style.backgroundColor = "#2F2E41";
     reserve.style.boxShadow = "9px 5px 7px rgba(0, 0, 0, 0.25)";
 
     revenue.style.backgroundColor = "";
@@ -193,7 +193,7 @@ function select(id){
     reserve.style.backgroundColor = "";
     reserve.style.boxShadow = "";
 
-    revenue.style.backgroundColor = "#813130";
+    revenue.style.backgroundColor = "#2F2E41";
     revenue.style.boxShadow = "9px 5px 7px rgba(0, 0, 0, 0.25)";
 
     stocks.style.backgroundColor = "";
@@ -223,7 +223,7 @@ function select(id){
     revenue.style.backgroundColor = "";
     revenue.style.boxShadow = "";
 
-    stocks.style.backgroundColor = "#813130";
+    stocks.style.backgroundColor = "#2F2E41";
     stocks.style.boxShadow = "9px 5px 7px rgba(0, 0, 0, 0.25)";
   }
 
@@ -233,7 +233,7 @@ function closeNav() {
   auxiliary.style.display = "flex";
   auxiliaryy.style.display = "none";
 
-  auxiliary.style.backgroundColor = "#813130";
+  auxiliary.style.backgroundColor = "#2F2E41";
   auxiliary.style.boxShadow = "9px 5px 7px rgba(0, 0, 0, 0.25)";
 
   home.style.backgroundColor = "";

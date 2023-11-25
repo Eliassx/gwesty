@@ -8,8 +8,12 @@ module.exports = class OfficialControllers{
         response.render('dashboard', { userData });
     }
 
+    static products(request, response) {
+        response.render('products');
+    }
+
     static registerComsuption(request, response) {
-        response.render('registerComsuption');
+        response.render('comsuption');
     }
 
     static register(request, response){

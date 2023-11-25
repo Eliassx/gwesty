@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 
 const database = require('../database/connect');
 
-const Official = database.define('Official', {
+const Noun = database.define('Noun', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -11,23 +11,25 @@ const Official = database.define('Official', {
         require: true
     },
 
-    email: {
+    description: {
         type: DataTypes.STRING,
-        allowNull: false,
-        require: true
+        allowNull: false
     },
 
-    number_contract: {
+    ramal_noun: {
         type: DataTypes.INTEGER,
-        allowNull: false,
-        require: true
+        allowNull: false
     },
 
-    password: {
+    capacity: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+
+    obs: {
         type: DataTypes.STRING,
-        allowNull: false,
-        require: true
+        allowNull: false      
     }
 });
 
-module.exports = Official;
+module.exports = Noun

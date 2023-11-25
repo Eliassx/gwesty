@@ -1,0 +1,21 @@
+.headerr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #f4f4f4;
+    width: 1360px;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.headerr img{
+    width: 60px;
+    height: 6%;
+}
+
+.headerr h2{
+    font-size: 4.3rem;
+    color: #3F3D56;
+    font-weight: 500;
+}

@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 
 const database = require('../database/connect');
 
-// const name = require('../models/Official');
+const Guest = require('../models/Guest');
 
 const Services = database.define('Services', {
     id: {
@@ -34,6 +34,6 @@ const Services = database.define('Services', {
     }
 });
 
-// name.belongsTo(Services)
+Guest.belongsTo(Services);
 
 module.exports = Services;

@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 
 const database = require('../database/connect');
 
-const Guest = databse.define('Guest', {
+const Guest = database.define('Guest', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -13,7 +13,24 @@ const Guest = databse.define('Guest', {
 
     email: {
         type: DataTypes.STRING,
-        
+        allowNull: false,
+        unique: true
+    },
+
+    cellphone: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+
+    cpf: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        unique: true
+    },
+
+    genre: {
+        type: DataTypes.STRING,
+        allowNull: false,
     }
 });
 

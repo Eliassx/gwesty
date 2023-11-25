@@ -10,10 +10,18 @@ const app = express();
 const connect = require('./src/database/connect');
 
 //Importar as tabelas - Models
-const Official = require('./src/models/Official');
+const Services = require('./src/models/Services');
+const Products = require('./src/models/Products');
+// const o = require('./src/models/Services');
+// const Service0 = require('./src/models/Services');
+// const Service0 = require('./src/models/Services');
+// const Service0 = require('./src/models/Services');
+// const Service0 = require('./src/models/Services');
+// const Service0 = require('./src/models/Services');
 
 //Importar as ROTAS - router
-const OfficialRoutes = require('./src/routes/OfficialRoutes');
+const ServicesRoutes = require('./src/routes/ServicesRoutes');
+const ProductsRoutes = require('./src/routes/ProductsRoutes');
 
 const hbs = exphbs.create({
   partialsDir: ['views/partials']
@@ -58,7 +66,8 @@ app.use((request, response, next)=>{
 
 //USAR AS ROTAS
 // /nomeMiddle/nomeRota
-app.use('/', OfficialRoutes);
+app.use('/', ServicesRoutes);
+app.use('/', ProductsRoutes);
 
 app.get('/', (request, response) => {
   return response.render('home')

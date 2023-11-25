@@ -8,7 +8,6 @@ const Products = database.define('Products', {
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
-        require: true
     },
 
     description: {
@@ -21,7 +20,7 @@ const Products = database.define('Products', {
         allowNull: false
     },
 
-    date: {
+    date_products: {
         type: DataTypes.DATE,
         allowNull: false
     },

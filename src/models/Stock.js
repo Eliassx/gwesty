@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 
 const database = require('../database/connect');
 
-const Noun = database.define('Noun', {
+const Stocks = database.define('Stocks', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -16,20 +16,25 @@ const Noun = database.define('Noun', {
         allowNull: false
     },
 
-    ramal_noun: {
+    quatity: {
         type: DataTypes.INTEGER,
         allowNull: false
     },
 
-    capacity: {
-        type: DataTypes.INTEGER,
+    date_stocks: {
+        type: DataTypes.DATE,
+        allowNull: false
+    },
+
+    type: {
+        type: DataTypes.STRING,
         allowNull: false
     },
 
     obs: {
         type: DataTypes.STRING,
-        allowNull: false      
+        allowNull: false
     }
 });
 
-module.exports = Noun;
+module.exports = Stocks;

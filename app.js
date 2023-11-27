@@ -14,7 +14,7 @@ const Services = require('./src/models/Services');
 const Products = require('./src/models/Products');
 const Noun = require('./src/models/Noun');
 const Stocks = require('./src/models/Stock');
-// const Service0 = require('./src/models/Services');
+const Guest = require('./src/models/Guest');
 // const Service0 = require('./src/models/Services');
 // const Service0 = require('./src/models/Services');
 // const Service0 = require('./src/models/Services');
@@ -24,6 +24,7 @@ const ServicesRoutes = require('./src/routes/ServicesRoutes');
 const ProductsRoutes = require('./src/routes/ProductsRoutes');
 const NounRoutes = require('./src/routes/NounRoutes');
 const StocksRoutes = require('./src/routes/StocksRoutes');
+const GuestRoutes = require('./src/routes/GuestRoutes');
 
 const hbs = exphbs.create({
   partialsDir: ['views/partials']
@@ -72,6 +73,7 @@ app.use('/', ServicesRoutes);
 app.use('/', ProductsRoutes);
 app.use('/', NounRoutes);
 app.use('/', StocksRoutes);
+app.use('/', GuestRoutes);
 
 
 app.get('/', (request, response) => {

@@ -33,16 +33,18 @@
                     </div>
 
                     <div class="auxiliary-nav" id="auxiliary-nav">
-                        <p>Produtos</p>
-                        <p>Serviços</p>
-                        <p>Acomodações</p>
+                        <a href="/products"><p>Produtos</p></a>
+                        <a href="/services"><p>Serviços</p></a>
+                        <a href="/noun"><p>Acomodações</p></a>
                     </div>
                 </div>
 
-                <div class="guests list" id="guests" onclick="select(this.id)">
-                    <img src="../assets/svg/cadastrar-h.svg" alt="">
-                    <p>Cadastrar Hóspedes</p>
-                </div>
+                <a href="/guests">
+                    <div class="guests list" id="guests" onclick="select(this.id)">
+                        <img src="../assets/svg/cadastrar-h.svg" alt="">
+                        <p>Cadastrar Hóspedes</p>
+                    </div>
+                </a>
 
                 <a href="/host">
                     <div class="host list" id="host" onclick="select(this.id)">
@@ -54,11 +56,6 @@
                 <div class="expenditure list" id="expenditure" onclick="select(this.id)">
                     <img src="../assets/svg/carrinho.svg" alt="">
                     <p>Registrar Consumo</p>
-                </div>
-
-                <div class="reserve list" id="reserve" onclick="select(this.id)">
-                    <img src="../assets/svg/calendario.svg" alt="">
-                    <p>Calendário de Reservas</p>
                 </div>
 
                 <div class="revenue list" id="revenue" onclick="select(this.id)">
@@ -89,36 +86,35 @@
 
         <div class="content">
             <div class="headerr">
-               <img src="../assets/svg/Estoque Icon.svg" alt="">
-               <h2>Registro de Estoque</h2>  
+               <img src="../assets/svg/hospedes.svg" alt="">
+               <h2>Cadastrar Hóspedes</h2>  
             </div>
 
            <div class="box-contentt">
-              <form action="/registerStocks" method="post">
+              <form action="/registerGuest" method="post">
                 <div class="form-content">
-                    <label for="description">Descrição</label>
-                    <input type="text" class="form-control" id="description" name="description">
+                    <label for="name">Nome</label>
+                    <input type="text" class="form-control" id="name" name="name">
                 </div>
 
                 <div class="form-content">
-                    <label for="quantity">Quantidade</label>
-                    <input type="number" class="form-control" id="quantity" name="quantity">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email">
                 </div>
 
                 <div class="form-content">
-                    <label for="date_stocks">Data de Estoque</label>
-                    <input type="date" class="form-control" id="date" name="date_stocks">
-                </div>
-
-
-                <div class="form-content">
-                    <label for="type">Tipo</label>
-                    <input type="text" class="form-control" id="valor" name="type">
+                    <label for="cellphone">Telefone</label>
+                    <input type="text" class="form-control" id="cellphone" name="cellphone">
                 </div>
 
                 <div class="form-content">
-                    <label for="description">Observações</label>
-                    <textarea name="obs" id="obss" cols="30" rows="4"></textarea>
+                    <label for="cpf">CPF</label>
+                    <input type="text" class="form-control" id="cellphone" name="cellphone">
+                </div>
+
+                <div class="form-content">
+                    <label for="genre">Gênero</label>
+                    <input type="text" class="form-control" id="genre" name="genre">
                 </div>
 
                 <div class="form-buttons">

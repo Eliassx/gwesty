@@ -15,6 +15,11 @@ const Reserve = database.define('Reserve', {
         type: DataTypes.STRING,
         allowNull: false
     },
+    
+    noun: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
 
     quantity: {
         type: DataTypes.INTEGER,

@@ -2,7 +2,11 @@ const Services = require('../models/Services');
 
 module.exports = class ServicesControllers {
     static service(request, response){
-        return response.render('services');
+        return response.render('servicess/services');
+    }
+
+    static serviceInclude(request, response){
+        return response.render('servicess/servicesInclude');
     }
 
     static async servicePost(request, response) {

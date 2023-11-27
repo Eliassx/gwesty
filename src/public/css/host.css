@@ -71,12 +71,12 @@
     color: rgba(97, 97, 97, 0.56);
 }
 
-.code, .guest-table, .local, .join, .effective-join, .confirmm{
+.table1, .table2, .table3, .table4, .table5, .table6{
     border: 1px solid #fff;
     width: 190px;
 }
 
-.action{
+.table7{
     width: 130px;
 }
 
@@ -90,12 +90,12 @@
     background-color: #E7E7E7;
 }
 
-.action .clear-line{
+.table7 .clear-line{
     display: flex;
     justify-content: center;
 }
 
-.action .dark-line{
+.table7 .dark-line{
     display: flex;
     justify-content: center;
 }

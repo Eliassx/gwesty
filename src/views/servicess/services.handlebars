@@ -1,132 +1,162 @@
 <section class="main">
-    <div class="side-bar">
-        <div class="blue">
-            <div class="official">
-                <img src="../assets/img/foto.jpg" alt="" class="official-photo">
-                <div class="name-function">
-                    <strong class="name">Marina Ruy Barbosa</strong>
-                    <p class="function">Gerente Geral</p>
-                </div>
-            </div>
-
-            <div class="nav">
-                <a href="/home">
-                    <div class="home list" id="home" onclick="select(this.id)">
-                        <img src="../assets/svg/home.svg" alt="">
-                        <p>Home</p>
+            <div class="side-bar">
+                <div class="blue">
+                    <div class="official">
+                        <img src="../assets/img/foto.jpg" alt="" class="official-photo">
+                        <div class="name-function">
+                            <strong class="name">Marina Ruy Brabosa</strong>
+                            <p class="function">Gerente Geral</p>
+                        </div>
                     </div>
-                </a>
+                    <div class="nav">
+                        <a href="/home">
+                            <div class="home list" id="home" onclick="select(this.id)">
+                                <img src="../assets/svg/home.svg" alt="">
+                                <p>Home</p>
+                            </div>
+                        </a>
 
-                <div class="auxiliary list" id="auxiliary" onclick="select(this.id)">
-                    <div class="auxiliary-name">
-                        <img src="../assets/svg/cadastrar.svg" alt="" class="auxiliary-photo">
-                        <p>Cadastrar Auxiliares</p>
-                        <img src="../assets/svg/seta.svg" alt="" id="arrow">
-                    </div>
-                </div>
+                        <div class="auxiliary list" id="auxiliary" onclick="select(this.id)">
+                            <div class="auxiliary-name">
+                                <img src="../assets/svg/cadastrar.svg" alt="" class="auxiliary-photo">
+                                <p>Cadastrar Auxiliares</p>
+                                <img src="../assets/svg/seta.svg" alt="" id="arrow">
+                            </div>
+                        </div>
 
-                <div class="auxiliary list" id="auxiliaryy" onclick="closeNav()">
-                    <div class="auxiliary-name">
-                        <img src="../assets/svg/cadastrar.svg" alt="" class="auxiliary-photo">
-                        <p>Cadastrar Auxiliares</p>
-                        <img src="../assets/svg/seta-baixo.svg" alt="" id="arrow2">
-                    </div>
+                        <div class="auxiliary list" id="auxiliaryy" onclick="closeNav()">
+                            <div class="auxiliary-name">
+                                <img src="../assets/svg/cadastrar.svg" alt="" class="auxiliary-photo">
+                                <p>Cadastrar Auxiliares</p>
+                                <img src="../assets/svg/seta-baixo.svg" alt="" id="arrow2">
+                            </div>
 
-                    <div class="auxiliary-nav" id="auxiliary-nav">
-                        <p>Produtos</p>
-                        <p>Serviços</p>
-                        <p>Acomodações</p>
-                    </div>
-                </div>
+                            <div class="auxiliary-nav" id="auxiliary-nav">
+                                <a href="/products"><p>Produtos</p></a>
+                                <a href="/services"><p>Serviços</p></a>
+                                <a href="/noun"><p>Acomodações</p></a>
+                            </div>
+                        </div>
 
-                <div class="guests list" id="guests" onclick="select(this.id)">
-                    <img src="../assets/svg/cadastrar-h.svg" alt="">
-                    <p>Cadastrar Hóspedes</p>
-                </div>
+                        <a href="/guests">
+                            <div class="guests list" id="guests" onclick="select(this.id)">
+                                <img src="../assets/svg/cadastrar-h.svg" alt="">
+                                <p>Cadastrar Hóspedes</p>
+                            </div>
+                        </a>
 
-                <a href="/host">
-                    <div class="host list" id="host" onclick="select(this.id)">
-                        <img src="../assets/svg/cama.svg" alt="">
-                        <p>Reservar/Hospedar</p>
-                    </div>
-                </a>
+                        <a href="host.html">
+                            <div class="host list" id="host" onclick="select(this.id)">
+                                <img src="../assets/svg/cama.svg" alt="">
+                                <p>Reservar/Hospedar</p>
+                            </div>
+                        </a>
 
-                <div class="expenditure list" id="expenditure" onclick="select(this.id)">
-                    <img src="../assets/svg/carrinho.svg" alt="">
-                    <p>Registrar Consumo</p>
-                </div>
+                        <div class="expenditure list" id="expenditure" onclick="select(this.id)">
+                            <img src="../assets/svg/carrinho.svg" alt="">
+                            <p>Registrar Consumo</p>
+                        </div>
 
-                <div class="reserve list" id="reserve" onclick="select(this.id)">
-                    <img src="../assets/svg/calendario.svg" alt="">
-                    <p>Calendário de Reservas</p>
-                </div>
-
-                <div class="revenue list" id="revenue" onclick="select(this.id)">
-                    <img src="../assets/svg/dinheiro.svg" alt="">
-                    <p>Receitas</p>
-                </div>
+                        <div class="revenue list" id="revenue" onclick="select(this.id)">
+                            <img src="../assets/svg/dinheiro.svg" alt="">
+                            <p>Receitas</p>
+                        </div>
                         
-                <div class="stocks list" id="stocks" onclick="select(this.id)">
-                    <img src="../assets/svg/caixa.svg" alt="">
-                    <p>Registrar Estoque</p>
+                        <div class="stocks list" id="stocks" onclick="select(this.id)">
+                            <img src="../assets/svg/caixa.svg" alt="">
+                            <p>Registrar Estoque</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="mainn">
-        <div class="semi-red">
-            <div class="welcome-img">
-                <p>Seja bem-vindo(a) ao Gwesty:</p>
-                <img src="../assets/svg/logo.svg" alt="">
+            <div class="mainn">
+                <div class="semi-red">
+                    <div class="welcome-img">
+                        <p>Seja bem-vindo(a) ao Gwesty:</p>
+                        <img src="../assets/svg/logo.svg" alt="">
+                    </div>
+
+                    <div class="logout">
+                        <p>Sair</p>
+                        <img src="../assets/svg/sair.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="headerr">
+                        <img src="../assets/svg/cadastrarBlue.svg" alt="">
+                        <h2>Cadastro de Serviços</h2>
+                    </div>
+
+                    <div class="box-content">
+                        <a href="/services/include-service"><button type="button" class="content-button">Incluir</button></a>
+
+                        <div class="table">
+                            <div class="table1">
+                                <h4>Código</h4>
+                                <p class="clear-line">1</p>
+                                <p class="dark-line">2</p>
+                                <p class="clear-line">3</p>
+                            </div>
+
+                            <div class="table2">
+                                <h4>Descrição</h4>
+                                <div class="table-data">
+                                    <p class="clear-line">1112234 - Giovanna Oliviera</p>
+                                    <p class="dark-line">1133445 - Guilherme Elias</p>
+                                    <p class="clear-line">1167893 - Carlos Isaías</p>
+                                </div>
+                            </div>
+
+                            <div class="table3">
+                                <h4>Quantidade</h4>
+                                <p class="clear-line">Chalé Família</p>
+                                <p class="dark-line">Cabana</p>
+                                <p class="clear-line">Suíte com cozinha</p>
+                            </div>
+
+                            <div class="table4">
+                                <h4>Reserva No.</h4>
+                                <p class="clear-line">02/12/2023</p>
+                                <p class="dark-line">05/12/2023</p>
+                                <p class="clear-line">05/12/2023</p>
+                            </div>
+
+                            <div class="table5">
+                                <h4>Valor</h4>
+                                <p class="clear-line">02/12/2023</p>
+                                <p class="dark-line">02/12/2023</p>
+                                <p class="clear-line">02/12/2023</p>
+                            </div>
+
+                            {{!-- <div class="table6">
+                                <h4>Confirmado</h4>
+                                <p class="clear-line">02/12/2023</p>
+                                <p class="dark-line">02/12/2023</p>
+                                <p class="clear-line">Não</p>
+                            </div> --}}
+
+                            <div class="table7">
+                                <h4>Ação</h4>
+                                <p class="clear-line">
+                                    <img src="./assets/svg/eye icon.svg" alt="">
+                                    <img src="./assets/svg/Cadastrar Icon.svg" alt="">
+                                    <img src="./assets/svg/trash icon.svg" alt="">
+                                </p>
+                                <p class="dark-line">
+                                    <img src="./assets/svg/eye icon.svg" alt="">
+                                    <img src="./assets/svg/Cadastrar Icon.svg" alt="">
+                                    <img src="./assets/svg/trash icon.svg" alt="">
+                                </p>
+                                <p class="clear-line">
+                                    <img src="./assets/svg/eye icon.svg" alt="">
+                                    <img src="./assets/svg/Cadastrar Icon.svg" alt="">
+                                    <img src="./assets/svg/trash icon.svg" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="logout">
-                <p>Sair</p>
-                <img src="../assets/svg/sair.svg" alt="">
-            </div>
-        </div>
-
-        <div class="content">
-            <div class="headerr">
-               <img src="../assets/svg/cadastrarBlue.svg" alt="">
-               <h2>Cadastro de Serviços</h2>  
-            </div>
-
-           <div class="box-contentt">
-              <form action="/registerServices" method="post">
-                <div class="form-content">
-                    <label for="description">Descrição</label>
-                    <input type="text" class="form-control" id="description" name="description">
-                </div>
-
-                <div class="form-content">
-                    <label for="type">Quantidade</label>
-                    <input type="number" class="form-control" id="quantity" name="quantity">
-                </div>
-
-                <div class="form-content">
-                    <label for="description">Reserva No.</label>
-                    <input type="number" class="form-control" id="date_products" name="date_products">
-                </div>
-
-
-                <div class="form-content">
-                    <label for="description">Valor</label>
-                    <input type="text" class="form-control" id="valor" name="valor">
-                </div>
-
-                <div class="form-content">
-                    <label for="description">Observações</label>
-                    <textarea name="obs" id="obss" cols="30" rows="4"></textarea>
-                </div>
-
-                <div class="form-buttons">
-                    <a href="/home"><button type="button" class="btn-cancel">Cancelar</button></a>
-                    <button type="submit" class="btn-confirm">Confirmar</button>
-                </div>
-              </form>
-           </div>
-        </div>
-    </div>
 </section>

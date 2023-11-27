@@ -11,6 +11,11 @@ const Guest = database.define('Guest', {
         require: true
     },
 
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+
     email: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -18,12 +23,12 @@ const Guest = database.define('Guest', {
     },
 
     cellphone: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false
     },
 
     cpf: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true
     },

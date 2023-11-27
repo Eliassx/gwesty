@@ -2,7 +2,11 @@ const Stocks = require('../models/Stock');
 
 module.exports = class StocksControllers {
     static stocks(request, response){
-        return response.render('stocks');
+        return response.render('stocks/stocks');
+    }
+
+    static stocksInclude(request, response){
+        return response.render('stocks/stocksInclude');
     }
 
     static async stocksPost(request, response) {

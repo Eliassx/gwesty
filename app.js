@@ -12,8 +12,8 @@ const connect = require('./src/database/connect');
 //Importar as tabelas - Models
 const Services = require('./src/models/Services');
 const Products = require('./src/models/Products');
-// const o = require('./src/models/Services');
-// const Service0 = require('./src/models/Services');
+const Noun = require('./src/models/Noun');
+const Stocks = require('./src/models/Stock');
 // const Service0 = require('./src/models/Services');
 // const Service0 = require('./src/models/Services');
 // const Service0 = require('./src/models/Services');
@@ -22,6 +22,8 @@ const Products = require('./src/models/Products');
 //Importar as ROTAS - router
 const ServicesRoutes = require('./src/routes/ServicesRoutes');
 const ProductsRoutes = require('./src/routes/ProductsRoutes');
+const NounRoutes = require('./src/routes/NounRoutes');
+const StocksRoutes = require('./src/routes/StocksRoutes');
 
 const hbs = exphbs.create({
   partialsDir: ['views/partials']
@@ -68,6 +70,9 @@ app.use((request, response, next)=>{
 // /nomeMiddle/nomeRota
 app.use('/', ServicesRoutes);
 app.use('/', ProductsRoutes);
+app.use('/', NounRoutes);
+app.use('/', StocksRoutes);
+
 
 app.get('/', (request, response) => {
   return response.render('home')

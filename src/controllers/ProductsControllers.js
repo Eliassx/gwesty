@@ -1,8 +1,18 @@
 const Products = require('../models/Products');
 
-module.exports = class ServicesControllers {
-    static products(request, response){
-        return response.render('products');
+module.exports = class ProductsControllers {
+    static home(request, response) {
+        return response.render('home')
+    }
+    
+    static products(request, response) {
+        const products = Products.findAll({ raw: true });
+
+        return response.render('products/products', { products });
+    }
+
+    static productsInclude(request, response) {
+        return response.render('products/productsInclude');
     }
 
     static async productsPost(request, response) {
@@ -17,7 +27,7 @@ module.exports = class ServicesControllers {
                 obs
             });
 
-            return response.redirect('/home')
+            return response.redirect('/products')
         } catch (error) {
             console.error(error)
         }

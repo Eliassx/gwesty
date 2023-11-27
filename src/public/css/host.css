@@ -52,6 +52,7 @@
 
 .table{
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -80,9 +81,21 @@
 }
 
 .clear-line{
+    gap: 1rem;
     background-color: #F5F2F2;
 }
 
 .dark-line{
+    gap: 1rem;
     background-color: #E7E7E7;
+}
+
+.action .clear-line{
+    display: flex;
+    justify-content: center;
+}
+
+.action .dark-line{
+    display: flex;
+    justify-content: center;
 }

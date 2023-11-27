@@ -26,6 +26,11 @@ const Noun = database.define('Noun', {
         allowNull: false
     },
 
+    type: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+
     obs: {
         type: DataTypes.STRING,
         allowNull: false      

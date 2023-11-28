@@ -15,7 +15,7 @@ const Comsuption = database.define('Comsuption', {
 
     product: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
 
     quantity: {
@@ -25,7 +25,7 @@ const Comsuption = database.define('Comsuption', {
 
     service: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: true
     }
 });
 

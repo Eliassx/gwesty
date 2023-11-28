@@ -32,9 +32,9 @@
                             </div>
 
                             <div class="auxiliary-nav" id="auxiliary-nav">
-                                <a href="/register/products"><p>Produtos</p></a>
-                                <a href="/register/services"><p>Serviços</p></a>
-                                <a href="/register/nouns"><p>Acomodações</p></a>
+                                <a href="/products"><p>Produtos</p></a>
+                                <a href="/services"><p>Serviços</p></a>
+                                <a href="/noun"><p>Acomodações</p></a>
                             </div>
                         </div>
 
@@ -88,60 +88,60 @@
                 </div>
 
                 <div class="content">
-                    <div class="header">
-                        <img src="../assets/svg/camaBlue.svg" alt="">
-                        <h2>Reservar/Hospedar</h2>
+                    <div class="headerr">
+                        <img src="../assets/svg/comprasBlue.svg" alt="">
+                        <h2>Registrar Consumo</h2>
                     </div>
 
                     <div class="box-content">
-                        <a href="/reserve/include-reserve"><button type="button" class="content-button">Incluir</button></a>
+                        <a href="/comsuption/include-comsuption"><button type="button" class="content-button">Incluir</button></a>
 
                         <div class="table">
                             <div class="table1">
                                 <h4>Código</h4>
-                                {{#each reserve}}
-                                <p class="dark-line">{{ this.id }}</p>
+                                {{#each comsuption}}
+                                <p class="dark-line">{{this.id}}</p>
                                 {{/each}}
                             </div>
 
                             <div class="table2">
-                                <h4>Hóspedes</h4>
+                                <h4>Descrição</h4>
                                 <div class="table-data">
-                                {{#each reserve}}
-                                <p class="dark-line">{{ this.client }}</p>
+                                {{#each comsuption}}
+                                <p class="dark-line">{{this.description}}</p>
                                 {{/each}}
                                 </div>
                             </div>
 
                             <div class="table3">
-                                <h4>Acomodação</h4>
-                                {{#each reserve}}
-                                <p class="dark-line">{{ this.noun }}</p>
+                                <h4>Quantidade</h4>
+                                {{#each comsuption}}
+                                <p class="dark-line">{{this.quantity}}</p>
                                 {{/each}}
                             </div>
 
                             <div class="table4">
-                                <h4>Entrada Prevista</h4>
-                                {{#each reserve}}
-                                <p class="dark-line" id="date">{{ this.join_provided }}</p>
+                                <h4>Data de Estoque</h4>
+                                {{#each comsuption}}
+                                <p class="dark-line" id="date">{{this.date_stocks}}</p>
                                 {{/each}}
                             </div>
 
                             <div class="table5">
-                                <h4>Entrada Efetiva</h4>
-                                {{#each reserve}}
-                                <p class="dark-line" id="date">{{ this.join_effective }}</p>
+                                <h4>Tipo</h4>
+                                {{#each comsuption}}
+                                <p class="dark-line">{{this.type}}</p>
                                 {{/each}}
                             </div>
 
-                            <div class="table6">
-                                <h4>Valor</h4>
-                                {{#each reserve}}
-                                <p class="dark-line">{{ this.pay_value }}</p>
-                                {{/each}}
-                            </div>
+                            {{!-- <div class="table6">
+                                <h4>Confirmado</h4>
+                                <p class="clear-line">02/12/2023</p>
+                                <p class="dark-line">02/12/2023</p>
+                                <p class="clear-line">Não</p>
+                            </div> --}}
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 </section>

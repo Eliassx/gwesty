@@ -53,10 +53,12 @@
                     </div>
                 </a>
 
-                <div class="expenditure list" id="expenditure" onclick="select(this.id)">
-                    <img src="../assets/svg/carrinho.svg" alt="">
-                    <p>Registrar Consumo</p>
-                </div>
+                <a href="/comsuption">
+                    <div class="expenditure list" id="expenditure" onclick="select(this.id)">
+                        <img src="../assets/svg/carrinho.svg" alt="">
+                        <p>Registrar Consumo</p>
+                    </div>
+                </a>
 
                 <div class="revenue list" id="revenue" onclick="select(this.id)">
                     <img src="../assets/svg/dinheiro.svg" alt="">
@@ -88,40 +90,34 @@
 
         <div class="content">
             <div class="headerr">
-               <img src="../assets/svg/Estoque Icon.svg" alt="">
-               <h2>Registro de Estoque</h2>  
+               <img src="../assets/svg/comprasBlue.svg" alt="">
+               <h2>Registrar Consumo</h2>  
             </div>
 
            <div class="box-contentt">
-              <form action="/registerStocks" method="post">
+              <form action="/registerComsuption" method="post">
                 <div class="form-content">
-                    <label for="description">Descrição</label>
-                    <input type="text" class="form-control" id="description" name="description">
+                    <label for="description">Reserva No.</label>
+                    <input type="number" class="form-control" id="reserve_id" name="reserve_id">
                 </div>
 
                 <div class="form-content">
-                    <label for="quantity">Quantidade</label>
-                    <input type="number" class="form-control" id="quantity" name="quantity">
+                    <label for="type">Produto</label>
+                    <input type="number" class="form-control" id="product" name="product">
                 </div>
 
                 <div class="form-content">
-                    <label for="date_stocks">Data de Estoque</label>
-                    <input type="date" class="form-control" id="date" name="date_stocks">
-                </div>
-
-
-                <div class="form-content">
-                    <label for="type">Tipo</label>
-                    <input type="text" class="form-control" id="valor" name="type">
+                    <label for="description">Serviço</label>
+                    <input type="number" class="form-control" id="services" name="services">
                 </div>
 
                 <div class="form-content">
-                    <label for="description">Observações</label>
-                    <textarea name="obs" id="obss" cols="30" rows="4"></textarea>
+                    <label for="description">Quantidade</label>
+                    <input type="text" class="form-control" id="quantity" name="quantity">
                 </div>
 
                 <div class="form-buttons">
-                    <a href="/stocks"><button type="button" class="btn-cancel">Cancelar</button></a>
+                    <a href="/noun"><button type="button" class="btn-cancel">Cancelar</button></a>
                     <button type="submit" class="btn-confirm">Confirmar</button>
                 </div>
               </form>

@@ -45,7 +45,7 @@
                             </div>
                         </a>
 
-                        <a href="">
+                        <a href="/reserve">
                             <div class="host list" id="host" onclick="select(this.id)">
                                 <img src="../assets/svg/cama.svg" alt="">
                                 <p>Reservar/Hospedar</p>
@@ -121,29 +121,15 @@
                             <div class="table4">
                                 <h4>Data de cadastro</h4>
                                 {{#each products}}
-                                <p class="dark-line">{{this.date_products}}</p>
+                                <p class="dark-line" id="date">{{this.date_products}}</p>
                                 {{/each}}
                             </div>
 
                             <div class="table5">
                                 <h4>Valor Unitário</h4>
                                 {{#each products}}
-                                <p class="dark-line">{{this.obs}}</p>
+                                <p class="dark-line">{{this.valor}}</p>
                                 {{/each}}
-                            </div>
-
-                            <div class="table7">
-                                <h4>Ação</h4>
-                                <p class="dark-line">
-                                    <img src="./assets/svg/eye icon.svg" alt="">
-                                    <img src="./assets/svg/Cadastrar Icon.svg" alt="">
-                                    <img src="./assets/svg/trash icon.svg" alt="">
-                                </p>
-                                <p class="dark-line">
-                                    <img src="./assets/svg/eye icon.svg" alt="">
-                                    <img src="./assets/svg/Cadastrar Icon.svg" alt="">
-                                    <img src="./assets/svg/trash icon.svg" alt="">
-                                </p>
                             </div>
                         </div>
                     </div>

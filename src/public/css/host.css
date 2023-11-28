@@ -67,12 +67,13 @@
 
 .table p{
     display: flex;
+    justify-content: center;
     align-items: center;
     font-size: 14px;
     height: 80px;
     padding: 1rem;
     margin-bottom: 2px;
-    font-size: 12px;
+    font-size: 15px;
     color: rgba(97, 97, 97, 0.56);
 }
 
@@ -88,22 +89,17 @@
 .table7{
     width: 130px;
 }
-.clear-line{
-    gap: 1rem;
-    background-color: #F5F2F2;
-}
 
 .dark-line{
     gap: 1rem;
     background-color: #E7E7E7;
 }
 
-.table7 .clear-line{
+.table7 .dark-line{
     display: flex;
     justify-content: center;
 }
 
-.table7 .dark-line{
-    display: flex;
-    justify-content: center;
+#date{
+    font-size: 12px;
 }

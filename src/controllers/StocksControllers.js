@@ -1,8 +1,10 @@
-const Stocks = require('../models/Stock');
+const Stocks = require('../models/Stocks');
 
 module.exports = class StocksControllers {
-    static stocks(request, response){
-        return response.render('stocks/stocks');
+    static async stocks(request, response){
+        const stocks = await Stocks.findAll({ raw: true });
+
+        return response.render('stocks/stocks', { stocks });
     }
 
     static stocksInclude(request, response){

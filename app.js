@@ -13,7 +13,7 @@ const connect = require('./src/database/connect');
 const Services = require('./src/models/Services');
 const Products = require('./src/models/Products');
 const Noun = require('./src/models/Noun');
-const Stocks = require('./src/models/Stock');
+const Stocks = require('./src/models/Stocks');
 const Guest = require('./src/models/Guest');
 // const Service0 = require('./src/models/Services');
 // const Service0 = require('./src/models/Services');
@@ -30,7 +30,16 @@ const hbs = exphbs.create({
   partialsDir: ['views/partials']
 });
 
-app.engine("handlebars", hbs.engine);
+app.engine("handlebars", exphbs.engine(
+  { 
+    defaultLayout: 'main',
+    helpers: {
+      formatDate: (date) => {
+          return moment(date).format('DD/MM/YYYY')
+      }
+    }
+  }
+  ));
 app.set("view engine", "handlebars");
 app.set("views", path.join(__dirname, "src/views"));
 

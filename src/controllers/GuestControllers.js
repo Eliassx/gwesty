@@ -17,7 +17,7 @@ module.exports = class GuestsControllers {
                 genre
             })
 
-            return response.redirect('/guest')
+            return response.redirect('/guests')
         } catch(error) {
             console.error(error)
         }

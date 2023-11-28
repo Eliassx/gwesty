@@ -16,7 +16,7 @@ const Stocks = database.define('Stocks', {
         allowNull: false
     },
 
-    quatity: {
+    quantity: {
         type: DataTypes.INTEGER,
         allowNull: false
     },

@@ -5,8 +5,8 @@ module.exports = class ProductsControllers {
         return response.render('home')
     }
     
-    static products(request, response) {
-        const products = Products.findAll({ raw: true });
+    static async products(request, response) {
+        const products = await Products.findAll({ raw: true });
 
         return response.render('products/products', { products });
     }
@@ -25,6 +25,8 @@ module.exports = class ProductsControllers {
                 date_products,
                 valor,
                 obs
+            },{
+
             });
 
             return response.redirect('/products')

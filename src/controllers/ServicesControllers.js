@@ -1,8 +1,10 @@
 const Services = require('../models/Services');
 
 module.exports = class ServicesControllers {
-    static service(request, response){
-        return response.render('servicess/services');
+    static async service(request, response){
+        const services = await Services.findAll({ raw: true });
+
+        return response.render('servicess/services', { services });
     }
 
     static serviceInclude(request, response){

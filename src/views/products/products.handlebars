@@ -62,10 +62,12 @@
                             <p>Receitas</p>
                         </div>
                         
-                        <div class="stocks list" id="stocks" onclick="select(this.id)">
-                            <img src="../assets/svg/caixa.svg" alt="">
-                            <p>Registrar Estoque</p>
-                        </div>
+                        <a href="/stocks">
+                            <div class="stocks list" id="stocks" onclick="select(this.id)">
+                                <img src="../assets/svg/caixa.svg" alt="">
+                                <p>Registrar Estoque</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -95,54 +97,49 @@
                         <div class="table">
                             <div class="table1">
                                 <h4>Código</h4>
-                                <p class="clear-line">1</p>
-                                <p class="dark-line">2</p>
-                                <p class="clear-line">3</p>
+                                {{#each products}}
+                                <p class="dark-line">{{this.id}}</p>
+                                {{/each}}
                             </div>
 
                             <div class="table2">
                                 <h4>Descrição</h4>
                                 <div class="table-data">
-                                    <p class="clear-line">1112234 - Giovanna Oliviera</p>
-                                    <p class="dark-line">1133445 - Guilherme Elias</p>
-                                    <p class="clear-line">1167893 - Carlos Isaías</p>
+                                    {{#each products}}
+                                    <p class="dark-line">{{this.description}}</p>
+                                    {{/each}}
                                 </div>
                             </div>
 
                             <div class="table3">
                                 <h4>Tipo</h4>
-                                <p class="clear-line">Chalé Família</p>
-                                <p class="dark-line">Cabana</p>
-                                <p class="clear-line">Suíte com cozinha</p>
+                                {{#each products}}
+                                <p class="dark-line"> {{this.type}} </p>
+                                {{/each}}
                             </div>
 
                             <div class="table4">
                                 <h4>Data de cadastro</h4>
-                                <p class="clear-line">02/12/2023</p>
-                                <p class="dark-line">05/12/2023</p>
-                                <p class="clear-line">05/12/2023</p>
+                                {{#each products}}
+                                <p class="dark-line">{{this.date_products}}</p>
+                                {{/each}}
                             </div>
 
                             <div class="table5">
                                 <h4>Valor Unitário</h4>
-                                <p class="clear-line">02/12/2023</p>
-                                <p class="dark-line">02/12/2023</p>
-                                <p class="clear-line">02/12/2023</p>
+                                {{#each products}}
+                                <p class="dark-line">{{this.obs}}</p>
+                                {{/each}}
                             </div>
 
                             <div class="table7">
                                 <h4>Ação</h4>
-                                <p class="clear-line">
-                                    <img src="./assets/svg/eye icon.svg" alt="">
-                                    <img src="./assets/svg/Cadastrar Icon.svg" alt="">
-                                    <img src="./assets/svg/trash icon.svg" alt="">
-                                </p>
                                 <p class="dark-line">
                                     <img src="./assets/svg/eye icon.svg" alt="">
                                     <img src="./assets/svg/Cadastrar Icon.svg" alt="">
                                     <img src="./assets/svg/trash icon.svg" alt="">
                                 </p>
-                                <p class="clear-line">
+                                <p class="dark-line">
                                     <img src="./assets/svg/eye icon.svg" alt="">
                                     <img src="./assets/svg/Cadastrar Icon.svg" alt="">
                                     <img src="./assets/svg/trash icon.svg" alt="">

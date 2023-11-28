@@ -1,8 +1,10 @@
 const Reserve = require('../models/Reserve');
 
 module.exports = class ReserveControllers{
-    static reserve(request, response) {
-        return response.render('reserve/reserve');
+    static async reserve(request, response) {
+        const reserve = await Reserve.findAll({ raw: true })
+
+        return response.render('reserve/reserve', { reserve });
     }
 
     static reserveInclude(request, response) {

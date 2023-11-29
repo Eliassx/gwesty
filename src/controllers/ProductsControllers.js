@@ -1,18 +1,25 @@
 const Products = require('../models/Products');
+const Official = require('../models/Official');
 
 module.exports = class ProductsControllers {
-    static home(request, response) {
-        return response.render('home')
+    static async home(request, response) {
+        const official = await Official.findAll({ raw: true });
+
+
+        return response.render('home', { official });
     }
     
     static async products(request, response) {
         const products = await Products.findAll({ raw: true });
+        const official = await Official.findAll({ raw: true });
 
-        return response.render('products/products', { products });
+        return response.render('products/products', { products, official });
     }
 
-    static productsInclude(request, response) {
-        return response.render('products/productsInclude');
+    static async productsInclude(request, response) {
+        const official = await Official.findAll({ raw: true });
+
+        return response.render('products/productsInclude', { official });
     }
 
     static async productsPost(request, response) {

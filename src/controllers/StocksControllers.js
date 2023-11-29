@@ -1,14 +1,18 @@
 const Stocks = require('../models/Stocks');
+const Official = require('../models/Official');
 
 module.exports = class StocksControllers {
     static async stocks(request, response){
         const stocks = await Stocks.findAll({ raw: true });
+        const official = await Official.findAll({ raw: true });
 
-        return response.render('stocks/stocks', { stocks });
+        return response.render('stocks/stocks', { stocks, official });
     }
 
-    static stocksInclude(request, response){
-        return response.render('stocks/stocksInclude');
+    static async stocksInclude(request, response){
+        const official = await Official.findAll({ raw: true });
+
+        return response.render('stocks/stocksInclude', { official });
     }
 
     static async stocksPost(request, response) {

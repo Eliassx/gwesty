@@ -1,8 +1,11 @@
 const Guest = require('../models/Guest');
+const Official = require('../models/Official');
 
 module.exports = class GuestsControllers {
-    static guest(request, response) {
-        return response.render('guests/guests');
+    static async guest(request, response) {
+        const official = await Official.findAll({ raw: true });
+
+        return response.render('guests/guests', { official });
     }
 
     static async guestPost(request, response){

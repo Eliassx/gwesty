@@ -17,11 +17,11 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-.container{
+/* .container{
     display: flex;
     flex-direction: column;
     height: 130vh;
-}
+} */
 
 .main{
     display: flex;
@@ -47,9 +47,8 @@ body{
 }
 
 .official-photo{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
 }
 

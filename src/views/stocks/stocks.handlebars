@@ -2,10 +2,11 @@
             <div class="side-bar">
                 <div class="blue">
                     <div class="official">
-                        <img src="../assets/img/foto.jpg" alt="" class="official-photo">
+                        <img src="../assets/svg/User.svg" alt="" class="official-photo">
                         <div class="name-function">
-                            <strong class="name">Marina Ruy Brabosa</strong>
-                            <p class="function">Gerente Geral</p>
+                            {{#each official}}
+                            <strong class="name">{{this.name}}</strong>
+                            {{/each}}
                         </div>
                     </div>
                     <div class="nav">

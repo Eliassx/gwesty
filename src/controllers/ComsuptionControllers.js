@@ -1,14 +1,18 @@
 const Comsuption = require('../models/Comsuption');
+const Official = require('../models/Official');
 
 module.exports = class ComsuptionControllers{
     static async comsuption(request, response) {
         const comsuption = await Comsuption.findAll({ raw: true });
+        const official = await Official.findAll({ raw: true });
 
-        return response.render('comsuption/comsuption', { comsuption });
+        return response.render('comsuption/comsuption', { comsuption, official });
     }
 
-    static comsuptioninclude(request, response) {
-        return response.render('comsuption/comsuptionInclude');
+    static async comsuptioninclude(request, response) {
+        const official = await Official.findAll({ raw: true });
+
+        return response.render('comsuption/comsuptionInclude', { official });
     }
 
     static async comsuptionPost(request, response) {

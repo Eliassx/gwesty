@@ -17,7 +17,7 @@ const Stocks = require('./src/models/Stocks');
 const Guest = require('./src/models/Guest');
 const Reserve = require('./src/models/Reserve');
 const Comsuption = require('./src/models/Comsuption');
-// const Service0 = require('./src/models/Services');
+const Official = require('./src/models/Official');
 
 //Importar as ROTAS - router
 const ServicesRoutes = require('./src/routes/ServicesRoutes');
@@ -27,6 +27,7 @@ const StocksRoutes = require('./src/routes/StocksRoutes');
 const GuestRoutes = require('./src/routes/GuestRoutes');
 const ReserveRoutes = require('./src/routes/ReserveRoutes');
 const ComsuptionRoutes = require('./src/routes/ComsuptionRoutes');
+const OfficialRoutes = require('./src/routes/OfficialRoutes');
 
 const hbs = exphbs.create({
   partialsDir: ['views/partials']
@@ -87,6 +88,7 @@ app.use('/', StocksRoutes);
 app.use('/', GuestRoutes);
 app.use('/', ReserveRoutes);
 app.use('/', ComsuptionRoutes);
+app.use('/', OfficialRoutes);
 
 
 app.get('/', (request, response) => {

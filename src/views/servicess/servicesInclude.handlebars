@@ -2,10 +2,11 @@
     <div class="side-bar">
         <div class="blue">
             <div class="official">
-                <img src="../assets/img/foto.jpg" alt="" class="official-photo">
+                <img src="../assets/svg/User.svg" alt="" class="official-photo">
                 <div class="name-function">
-                    <strong class="name">Marina Ruy Barbosa</strong>
-                    <p class="function">Gerente Geral</p>
+                    {{#each official}}
+                    <strong class="name">{{this.name}}</strong>
+                    {{/each}}
                 </div>
             </div>
 
@@ -96,12 +97,6 @@
                     <label for="type">Quantidade</label>
                     <input type="number" class="form-control" id="quantity" name="quantity">
                 </div>
-
-                <div class="form-content">
-                    <label for="description">Reserva No.</label>
-                    <input type="number" class="form-control" id="date_products" name="date_products">
-                </div>
-
 
                 <div class="form-content">
                     <label for="description">Valor</label>

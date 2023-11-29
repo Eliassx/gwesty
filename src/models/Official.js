@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 
 const database = require('../database/connect');
 
-const Services = database.define('Services', {
+const Official = database.define('Official', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -11,25 +11,21 @@ const Services = database.define('Services', {
         require: true
     },
 
-    description: {
+    name: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
     },
 
-    quantity: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
-
-    valor: {
-        type: DataTypes.INTEGER,
-        allowNull: false       
-    },
-
-    obs: {
+    email: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
+    },
+
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
     }
 });
 
-module.exports = Services;
+module.exports = Official

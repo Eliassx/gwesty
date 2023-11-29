@@ -1,15 +1,18 @@
 const Reserve = require('../models/Reserve');
+const Official = require('../models/Official');
 
 module.exports = class ReserveControllers{
     static async reserve(request, response) {
-        const reserve = await Reserve.findAll({ raw: true })
+        const reserve = await Reserve.findAll({ raw: true });
+        const official = await Official.findAll({ raw: true });
 
-        return response.render('reserve/reserve', { reserve });
+        return response.render('reserve/reserve', { reserve, official });
     }
 
-    static reserveInclude(request, response) {
-        return response.render('reserve/reserveInclude');
+    static async reserveInclude(request, response) {
+        const official = await Official.findAll({ raw: true });
 
+        return response.render('reserve/reserveInclude', { official });
     }
 
     static async reservePost(request, response) {

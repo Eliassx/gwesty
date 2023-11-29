@@ -59,11 +59,6 @@
                         <p>Registrar Consumo</p>
                     </div>
                 </a>
-
-                <div class="revenue list" id="revenue" onclick="select(this.id)">
-                    <img src="../assets/svg/dinheiro.svg" alt="">
-                    <p>Receitas</p>
-                </div>
                         
                 <a href="/stocks">
                     <div class="stocks list" id="stocks" onclick="select(this.id)">
@@ -125,12 +120,12 @@
 
                         <div class="form-content">
                             <label for="description">Entrada Efetiva</label>
-                            <input type="date" class="form-control" id="join_effective" name="join_effective">
+                            <input type="date" class="form-control" id="join_effective" name="join_effective" onchange="calculate()">
                         </div>
 
                         <div class="form-content">
                             <label for="description">Valor da Reserva</label>
-                            <input type="number" class="form-control" id="reserve_value" name="reserve_value">
+                            <input type="number" class="form-control" id="reserve_value" name="reserve_value" onchange="calculate()">
                         </div>
 
                         <div class="form-content">
@@ -152,7 +147,7 @@
 
                         <div class="form-content">
                             <label for="description">Saída Efetiva</label>
-                            <input type="date" class="form-control" id="leave_effective" name="leave_effective">
+                            <input type="date" class="form-control" id="leave_effective" name="leave_effective" onchange="calculate()">
                         </div>
 
                         <div class="form-content">

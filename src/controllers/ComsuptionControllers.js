@@ -23,7 +23,9 @@ module.exports = class ComsuptionControllers{
                 product,
                 quantity,
                 service
-            })
+            });
+
+            return response.redirect('/comsuption');
         } catch (error) {
             console.error(error);
         }

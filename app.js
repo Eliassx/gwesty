@@ -16,7 +16,7 @@ const Noun = require('./src/models/Noun');
 const Stocks = require('./src/models/Stocks');
 const Guest = require('./src/models/Guest');
 const Reserve = require('./src/models/Reserve');
-const Comsuption = require('./src/models/Comsuption');
+// const Comsuption = require('./src/models/Comsuption');
 const Official = require('./src/models/Official');
 
 //Importar as ROTAS - router
@@ -26,7 +26,7 @@ const NounRoutes = require('./src/routes/NounRoutes');
 const StocksRoutes = require('./src/routes/StocksRoutes');
 const GuestRoutes = require('./src/routes/GuestRoutes');
 const ReserveRoutes = require('./src/routes/ReserveRoutes');
-const ComsuptionRoutes = require('./src/routes/ComsuptionRoutes');
+// const ComsuptionRoutes = require('./src/routes/ComsuptionRoutes');
 const OfficialRoutes = require('./src/routes/OfficialRoutes');
 
 const hbs = exphbs.create({
@@ -87,7 +87,7 @@ app.use('/', NounRoutes);
 app.use('/', StocksRoutes);
 app.use('/', GuestRoutes);
 app.use('/', ReserveRoutes);
-app.use('/', ComsuptionRoutes);
+// app.use('/', ComsuptionRoutes);
 app.use('/', OfficialRoutes);
 
 

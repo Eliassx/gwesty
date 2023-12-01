@@ -2,8 +2,6 @@ const { DataTypes } = require('sequelize');
 
 const database = require('../database/connect');
 
-const Guest = require('../models/Guest');
-
 const Comsuption = database.define('Comsuption', {
     id: {
         type: DataTypes.INTEGER,
@@ -28,7 +26,5 @@ const Comsuption = database.define('Comsuption', {
         allowNull: true
     }
 });
-
-Guest.belongsTo(Comsuption);
 
 module.exports = Comsuption;

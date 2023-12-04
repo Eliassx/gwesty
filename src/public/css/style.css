@@ -173,6 +173,10 @@ body{
     height: 80px;
 }
 
+.semi-red a{
+    text-decoration: none;
+}
+
 .welcome-img{
     display: flex;
     align-items: center;
